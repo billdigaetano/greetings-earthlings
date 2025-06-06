@@ -1,4 +1,4 @@
-/* App.css with sparkle animations, hover effects, and color palette */
+/* App.css with fixed star overlay, sparkle animations, hover effects, and color palette */
 
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Nunito:wght@300;600;800&display=swap');
 
@@ -109,11 +109,25 @@ body {
   font-size: 0.875rem;
 }
 
-/* Magic Spoon Style Star Background - V2 (Using ✦/✧/✨ characters) */
-.star-field span {
+/* ✨ Fixed star overlay styles */
+.star-overlay {
   position: absolute;
-  font-size: 1.2rem;
-  color: #9EE7FF;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
   z-index: 0;
+}
+
+.text-star {
+  position: absolute;
+  font-size: 1.5rem;
+  color: #ffffffcc;
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
 }
