@@ -13,14 +13,20 @@
 body {
   margin: 0;
   font-family: 'Quicksand', 'Nunito', sans-serif;
-  background-color: var(--moon-cream);
+  background: linear-gradient(to bottom, #1b0034 0%, #4b0055 50%, #8e007f 100%);
   color: var(--cosmic-navy);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 .app-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  position: relative;
+  z-index: 1;
 }
 
 .header {
@@ -34,13 +40,14 @@ body {
 
 .logo {
   height: 60px;
-}.circle-logo {
+}
+
+.circle-logo {
   display: block;
   margin: 0 auto 1.5rem auto;
   max-width: 400px;
   width: 75%;
 }
-
 
 .nav a {
   margin: 0 1rem;
@@ -102,3 +109,11 @@ body {
   font-size: 0.875rem;
 }
 
+/* Magic Spoon Style Star Background - V2 (Using ✦/✧/✨ characters) */
+.star-field span {
+  position: absolute;
+  font-size: 1.2rem;
+  color: #9EE7FF;
+  pointer-events: none;
+  z-index: 0;
+}
