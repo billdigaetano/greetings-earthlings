@@ -1,1 +1,98 @@
 /* App.css with sparkle animations, hover effects, and color palette */
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Nunito:wght@300;600;800&display=swap');
+
+:root {
+  --alien-green: #9EFFA9;
+  --cosmic-navy: #001F3F;
+  --moon-cream: #F4F4ED;
+  --sparkle-purple: #B388EB;
+  --asteroid-gray: #A0A0A0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Quicksand', 'Nunito', sans-serif;
+  background-color: var(--moon-cream);
+  color: var(--cosmic-navy);
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: var(--cosmic-navy);
+  color: white;
+}
+
+.logo {
+  height: 60px;
+}
+
+.nav a {
+  margin: 0 1rem;
+  color: var(--alien-green);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav a:hover {
+  color: var(--sparkle-purple);
+}
+
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem;
+}
+
+.headline {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--cosmic-navy);
+}
+
+.subheadline {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  color: var(--asteroid-gray);
+}
+
+.cta-button {
+  background-color: var(--alien-green);
+  color: var(--cosmic-navy);
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease-in-out;
+}
+
+.cta-button:hover {
+  background-color: var(--sparkle-purple);
+  color: white;
+  transform: scale(1.05);
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--cosmic-navy);
+  color: white;
+  font-size: 0.875rem;
+}
+
