@@ -1,6 +1,6 @@
-// App.js with circular logo, personalization tagline, and custom-shaped star elements
+// App.js with circular logo, personalization tagline, and static styled stars
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import './App.css';
 import alienLogo from './assets/alien-logo.png';
 import circleLogo from './assets/logo-transparent.png';
@@ -15,20 +15,6 @@ const starElements = [
 ];
 
 function App() {
-  useEffect(() => {
-    const starField = document.querySelector('.star-field');
-    if (!starField) return;
-
-    starField.innerHTML = ''; // clear any old stars
-    for (let i = 0; i < 20; i++) {
-      const star = document.createElement('div');
-      star.className = 'star';
-      star.style.top = `${Math.random() * 200}vh`;
-      star.style.left = `${Math.random() * 100}vw`;
-      starField.appendChild(star);
-    }
-  }, []);
-
   return (
     <div className="app-container">
       <div className="star-field"></div>
