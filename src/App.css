@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  font-family: 'Quicksand', 'Nunito', sans-serif;
+  background-color: #f2f7f5;
+  color: #001233;
+}
+
+button.cta {
+  background-color: #2dd881;
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button.cta:hover {
+  background-color: #27c576;
+}
