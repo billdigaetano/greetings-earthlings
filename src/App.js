@@ -19,8 +19,8 @@ function App() {
 
       <main className="main-content">
         <img src={circleLogo} alt="Circle Greetings Earthlings Logo" className="circle-logo" />
-        <h1 className="headline">Greetings, Earthlings.</h1>
-        <p className="subheadline">Never forget a card again.</p>
+        <h1 className="headline">A card concierge for the forgetful, the thoughtful, and everyone in between!</h1>
+        <p className="subheadline">We're not replacing personalization, we're making it easier to be personal.</p>
         <button className="cta-button">Start Here</button>
       </main>
 
