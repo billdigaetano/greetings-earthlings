@@ -34,7 +34,13 @@ body {
 
 .logo {
   height: 60px;
+}.circle-logo {
+  display: block;
+  margin: 0 auto 1.5rem auto;
+  max-width: 400px;
+  width: 75%;
 }
+
 
 .nav a {
   margin: 0 1rem;
