@@ -1,9 +1,10 @@
-// App.js with 10 stars positioned behind layout without disrupting nav or text
-
+// App.js with router-enabled nav and working About route
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import alienLogo from './assets/alien-logo.png';
 import circleLogo from './assets/logo-transparent.png';
+import About from './pages/About'; // ✅ Correct path
 
 // ✨ 10 Custom static star shapes
 const starElements = [
@@ -21,35 +22,42 @@ const starElements = [
 
 function App() {
   return (
-    <>
-      {/* ⭐ Stars placed outside main layout to avoid pushing navbar down */}
+    <Router>
+      {/* ⭐ Stars placed outside layout to avoid pushing navbar down */}
       <div className="star-overlay">
         {starElements}
       </div>
 
-      {/* 🌍 Main content wrapper */}
       <div className="app-container">
         <header className="header">
           <img src={alienLogo} alt="Greetings Earthlings Logo" className="logo" />
           <nav className="nav">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Cards</a>
+            <Link to="/">Home</Link>
+            <Link to="/about">About</Link>
+            <Link to="/cards">Cards</Link>
           </nav>
         </header>
 
-        <main className="main-content">
-          <img src={circleLogo} alt="Circle Greetings Earthlings Logo" className="circle-logo" />
-          <h1 className="headline">A card concierge for the forgetful, the thoughtful, and everyone in between!</h1>
-          <p className="subheadline">We're not replacing personalization, we're making it easier to be personal.</p>
-          <button className="cta-button">Start Here</button>
-        </main>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <main className="main-content">
+                <img src={circleLogo} alt="Circle Greetings Earthlings Logo" className="circle-logo" />
+                <h1 className="headline">A card concierge for the forgetful, the thoughtful, and everyone in between!</h1>
+                <p className="subheadline">We're not replacing personalization, we're making it easier to be personal.</p>
+                <button className="cta-button">Start Here</button>
+              </main>
+            }
+          />
+          <Route path="/about" element={<About />} />
+        </Routes>
 
         <footer className="footer">
           <p>© 2025 Greetings Earthlings. All rights reserved.</p>
         </footer>
       </div>
-    </>
+    </Router>
   );
 }
 
